@@ -1,0 +1,47 @@
+{% include "header.html" %}
+<!-- banner -->
+<div class="inside-banner">
+  <div class="container"> 
+    <span class="pull-right"><a href="/index">Home</a> / Map </span>
+    <h2> Map </h2>
+</div>
+</div>
+<!-- banner -->
+
+
+<div class="container">
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <style>
+            #map {
+                height: 400px;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    <script>
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 4,
+                center: {lat: 37.0902, lng: -95.7129}
+            });
+            var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+            var marker = new google.maps.Marker({
+                position: {lat: 37.0902, lng: -95.7129},
+                icon: image,
+                map: map
+            });
+        }
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtbuCnF0HqV7vbGVRWIZ2DC8cmGQIpY0g&callback=initMap">
+    </script>
+    </body>
+    </html>
+</div>
+
+{% include "footer.html" %}
