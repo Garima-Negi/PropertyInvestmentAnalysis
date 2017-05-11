@@ -22,5 +22,5 @@ urlpatterns = [
     url(r'^index$', views.home, name='home'),
     url(r'^about$', views.about, name='about'),
     url(r'^contact$', views.contact, name='contact'),
-    url(r'^buysalerent$', views.buysalerent, name='buysalerent'),
+    url(r'^map$', views.map, name='map'),
 ]
